@@ -1,0 +1,24 @@
+<%layout("/layout/boilerplate") %>
+
+  <h3>All Listings</h3>
+
+  <% for(let listing in allListings) { %>
+<div class="card" style="width: 18rem">
+    <img src="<%= listing.image %> " class="card-img-top" alt="listing_image" />
+    <div class="card-body">
+      <p class="card-text"> <%= listing.title %>
+        <%= listing.price %>
+      </p>
+    </div>
+  </div>
+  <% } %>
+
+  <!-- <form action="/listings/new">
+    <button>create new listing</button> 
+  </form> -->
+  <ul>
+    <% for(let listing in allListings) { %>
+    <li><a href="/listings/ <%=listing._id %>"> <%=listing.title %> </a></li>
+    <% } %>
+  </ul>
+

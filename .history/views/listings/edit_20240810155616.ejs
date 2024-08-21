@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderLust</title>
+</head>
+<body>
+    <h3>Edit the new listing</h3>
+    <form action="/listings">
+        <input type="text" name="Title" value=" <%= listing.title %>" placeholder="Enter the title">
+        <br>
+        <textarea name="listing[Description]" type="text" value=" <%= listing.Description %>"  placeholder="Enter the description"></textarea><br>
+        <input type="text" value=" <%= listing.image %>" name="listing[image]" placeholder="Enter the price"><br>
+        
+        <input type="number" name="listing[Price]" value=" <%= listing.Price %>" placeholder="Enter the price"><br>
+        <input type="text" name="listing[Location]" value=" <%= listing.Location %>" placeholder="Enter the location"><br>
+        <input type="text" name="listing[Country]"  value=" <%= listing.Country %>" placeholder="Select the country">
+
+        <button>Edit</button>
+    </form>
+    
+</body>
+</html>

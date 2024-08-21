@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WanderLust</title>
+  </head>
+  <body>
+    <h3>Create new listing</h3>
+    <form action="/listings" method="post">
+        
+      <div class="mb-3">
+        <label for="Title" class="form-label">Title</label>
+        <input
+          type="text"
+          name="listing[Title]"
+          placeholder="Enter the title"
+          class="form-control"
+        />
+      </div>
+
+      <div class="mb-3">
+      <label for="description" class="form-label">description</label>
+      <textarea
+        name="listing[Description]"
+        placeholder="Enter the description"
+        class="form-control"></textarea>
+    </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input
+          &#x20B9;
+          type="number"
+          name="listing[Price]"
+          placeholder="Enter the price"
+          class="form-control"        />
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+          type="text"
+          name="listing[Location]"
+          placeholder="Enter the location"
+          class="form-control"  />  </div>
+
+    <div class="mb-3"> 
+        <label for="country" class="form-label">Country</label>
+        <input
+          type="text"
+          name="listing[Country]"
+          placeholder="Select the country" class="form-control"
+        />
+    </div>
+
+       <button class="btn btn-dark">Add</button>
+    </form>
+  </body>
+</html>

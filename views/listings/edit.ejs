@@ -1,0 +1,45 @@
+<%layout("/layout/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+
+    <h3>Edit the new listing</h3>
+   
+    <form  method="post" action="/listings/<%= listing._id %>? method=PUT"  novalidate class="needs-validation">
+        <div class="mb-3">
+     <label for="title" class="form-label" >Title:</label>
+        <input  class="form-control" type="text" name="Title" value=" <%= listing.title %>" placeholder="Enter the title" required>
+       </div>
+
+       <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea   class="form-control" name="listing[Description]" type="text" value=" <%= listing.Description %>"  placeholder="Enter the description"  required></textarea>
+        </div>
+
+        <div class="mb-3">
+        <label for="image">Image:</label>
+        <input   class="form-control" type="text" value=" <%= listing.image %>" name="listing[image]" placeholder="select the Image" required>
+        </div>
+         <div class="row">
+            <div class="mb-3 col-4">
+                <label for="price"  class="form-label">Price:</label>
+                <input   class="form-control" type="number" name="listing[Price]" value=" <%= listing.Price %>" placeholder="Enter the price" required>
+                   </div>
+                   <div class="mb-3  col-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input  class="form-control" type="text" name="listing[Country]"  value=" <%= listing.Country %>" placeholder="Select the country" required>
+                    </div>
+         </div>
+        
+
+        <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input  class="form-control" type="text" name="listing[Location]" value=" <%= listing.Location %>" placeholder="Enter the location" >
+       </div>
+
+        
+
+        <button class="btn btn-dark">Edit</button>
+    </form>
+</div>
+</div>
+<script src="/js/script.js"></script>
